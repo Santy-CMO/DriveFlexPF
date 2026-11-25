@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Catálogo de autos | DriveFlex</title>
+<meta name="description" content="Flota DriveFlex: autos económicos, sedanes ejecutivos y SUVs con pasajeros, transmisión y equipaje.">
+</head>
+<body>
+<header class="cabecera">
+  <a class="logo" href="index.html">DriveFlex</a>
+  <nav aria-label="Principal">
+    <ul class="menu">
+      <li><a href="index.html">Tarifas</a></li>
+      <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+      <li><a href="contacto.html">Cotizar</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="seccion" aria-labelledby="titulo-catalogo">
+    <h1 id="titulo-catalogo">Catálogo de autos</h1>
+    <p>Elige la categoría que se ajuste a tu viaje. Todas incluyen seguro básico y kilometraje libre.</p>
+
+    <fieldset class="filtros">
+      <legend>Filtrar por categoría</legend>
+      <button type="button" class="filtro activo" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="filtro" data-filtro="economico" aria-pressed="false">Económico</button>
+      <button type="button" class="filtro" data-filtro="sedan" aria-pressed="false">Sedán ejecutivo</button>
+      <button type="button" class="filtro" data-filtro="suv" aria-pressed="false">SUV</button>
+    </fieldset>
+
+    <section class="catalogo" aria-live="polite">
+      <article class="auto" data-categoria="economico">
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2012_Nissan_Micra_%28K13%29_ST_hatchback_%282012-10-26%29.jpg?width=800" referrerpolicy="no-referrer" alt="Imagen de referencia: Nissan March" width="800" height="480" loading="lazy">
+          <figcaption>Económico</figcaption>
+        </figure>
+        <h3>Nissan March</h3>
+        <dl class="ficha">
+          <dt>Pasajeros</dt><dd>4-5</dd>
+          <dt>Transmisión</dt><dd>Manual</dd>
+          <dt>Equipaje</dt><dd>2 maletas chicas</dd>
+        </dl>
+        <p class="precio">$450 <small>por día</small></p>
+        <a class="boton" href="contacto.html?categoria=economico">Cotizar</a>
+      </article>
+      <article class="auto" data-categoria="economico">
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2012_Chevrolet_Aveo_LTZ_1.4_Front.jpg?width=800" referrerpolicy="no-referrer" alt="Imagen de referencia: Chevrolet Aveo" width="800" height="480" loading="lazy">
+          <figcaption>Económico</figcaption>
+        </figure>
+        <h3>Chevrolet Aveo</h3>
+        <dl class="ficha">
+          <dt>Pasajeros</dt><dd>5</dd>
+          <dt>Transmisión</dt><dd>Automática</dd>
+          <dt>Equipaje</dt><dd>2 maletas medianas</dd>
+        </dl>
+        <p class="precio">$480 <small>por día</small></p>
+        <a class="boton" href="contacto.html?categoria=economico">Cotizar</a>
+      </article>
+      <article class="auto" data-categoria="sedan">
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2018_Toyota_Camry_%28ASV70R%29_Ascent_sedan_%282018-08-27%29_01.jpg?width=800" referrerpolicy="no-referrer" alt="Imagen de referencia: Toyota Camry" width="800" height="480" loading="lazy">
+          <figcaption>Sedán ejecutivo</figcaption>
+        </figure>
+        <h3>Toyota Camry</h3>
+        <dl class="ficha">
+          <dt>Pasajeros</dt><dd>5</dd>
+          <dt>Transmisión</dt><dd>Automática</dd>
+          <dt>Equipaje</dt><dd>3 maletas medianas</dd>
+        </dl>
+        <p class="precio">$850 <small>por día</small></p>
+        <a class="boton" href="contacto.html?categoria=sedan">Cotizar</a>
+      </article>
+      <article class="auto" data-categoria="sedan">
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2018_Mazda6_Sport_NAV%2B_Diesel_2.2_Front.jpg?width=800" referrerpolicy="no-referrer" alt="Imagen de referencia: Mazda 6" width="800" height="480" loading="lazy">
+          <figcaption>Sedán ejecutivo</figcaption>
+        </figure>
+        <h3>Mazda 6</h3>
+        <dl class="ficha">
+          <dt>Pasajeros</dt><dd>5</dd>
+          <dt>Transmisión</dt><dd>Automática</dd>
+          <dt>Equipaje</dt><dd>3 maletas medianas</dd>
+        </dl>
+        <p class="precio">$880 <small>por día</small></p>
+        <a class="boton" href="contacto.html?categoria=sedan">Cotizar</a>
+      </article>
+      <article class="auto" data-categoria="suv">
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2015_Mazda_CX-5_Sport_2.0.jpg?width=800" referrerpolicy="no-referrer" alt="Imagen de referencia: Mazda CX-5" width="800" height="480" loading="lazy">
+          <figcaption>SUV</figcaption>
+        </figure>
+        <h3>Mazda CX-5</h3>
+        <dl class="ficha">
+          <dt>Pasajeros</dt><dd>5</dd>
+          <dt>Transmisión</dt><dd>Automática</dd>
+          <dt>Equipaje</dt><dd>4 maletas medianas</dd>
+        </dl>
+        <p class="precio">$1,200 <small>por día</small></p>
+        <a class="boton" href="contacto.html?categoria=suv">Cotizar</a>
+      </article>
+      <article class="auto" data-categoria="suv">
+        <figure>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/2015_Chevrolet_Suburban_1500_LTZ%2C_front_4.18.19.jpg?width=800" referrerpolicy="no-referrer" alt="Imagen de referencia: Chevrolet Suburban" width="800" height="480" loading="lazy">
+          <figcaption>SUV</figcaption>
+        </figure>
+        <h3>Chevrolet Suburban</h3>
+        <dl class="ficha">
+          <dt>Pasajeros</dt><dd>7</dd>
+          <dt>Transmisión</dt><dd>Automática</dd>
+          <dt>Equipaje</dt><dd>5 maletas grandes</dd>
+        </dl>
+        <p class="precio">$1,650 <small>por día</small></p>
+        <a class="boton" href="contacto.html?categoria=suv">Cotizar</a>
+      </article>
+    </section>
+    <p class="creditos"><small>Fotografías de referencia: Wikimedia Commons, bajo licencias Creative Commons (cada imagen conserva el crédito de su autor). Las unidades reales pueden variar en color y versión.</small></p>
+  </section>
+</main>
+<footer class="pie">
+  <section aria-label="Datos de contacto">
+    <h2>DriveFlex Renta de Autos</h2>
+    <p>Entrega y recepción a domicilio o en puntos estratégicos de la ciudad.</p>
+  </section>
+  <nav aria-label="Pie de página">
+    <ul class="menu">
+      <li><a href="index.html">Tarifas</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Cotizar</a></li>
+    </ul>
+  </nav>
+  <small>© 2026 DriveFlex. Todos los precios en pesos mexicanos (MXN) e incluyen IVA.</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>Cotizar y reservar | DriveFlex</title>
+<meta name="description" content="Calcula el costo total de tu renta según días, categoría y cobertura, y envía tu solicitud de reserva.">
+</head>
+<body>
+<header class="cabecera">
+  <a class="logo" href="index.html">DriveFlex</a>
+  <nav aria-label="Principal">
+    <ul class="menu">
+      <li><a href="index.html">Tarifas</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html" aria-current="page">Cotizar</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="seccion" aria-labelledby="titulo-cotizador">
+    <h1 id="titulo-cotizador">Cotiza y reserva tu auto</h1>
+    <p>Elige tus opciones y el total se actualiza al instante. Todos los campos marcados con * son obligatorios.</p>
+
+    <section class="cotizador">
+      <form id="cotizador" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Datos del conductor</legend>
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+
+          <label for="correo">Correo electrónico *</label>
+          <input type="email" id="correo" name="correo" required autocomplete="email">
+
+          <label for="telefono">Teléfono a 10 dígitos *</label>
+          <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" inputmode="numeric" autocomplete="tel">
+
+          <label for="licencia">Número de licencia *</label>
+          <input type="text" id="licencia" name="licencia" required minlength="5">
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu renta</legend>
+          <label for="categoria">Categoría *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecciona una categoría</option>
+            <option value="economico" data-precio="450">Económico ($450 por día)</option>
+            <option value="sedan" data-precio="850">Sedán ejecutivo ($850 por día)</option>
+            <option value="suv" data-precio="1200">SUV ($1,200 por día)</option>
+          </select>
+
+          <label for="recogida">Fecha de entrega *</label>
+          <input type="date" id="recogida" name="recogida" required>
+
+          <label for="dias">Número de días *</label>
+          <input type="number" id="dias" name="dias" required min="1" max="30" value="1">
+        </fieldset>
+
+        <fieldset>
+          <legend>Cobertura</legend>
+          <label class="opcion"><input type="radio" name="cobertura" value="0" checked> Básica, incluida</label>
+          <label class="opcion"><input type="radio" name="cobertura" value="150"> Amplia, +$150 por día</label>
+          <label class="opcion"><input type="radio" name="cobertura" value="250"> Total, +$250 por día</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras</legend>
+          <label class="opcion"><input type="checkbox" name="extra" value="150" data-tipo="unico"> Entrega y recepción a domicilio, $150</label>
+          <label class="opcion"><input type="checkbox" name="extra" value="80" data-tipo="dia"> Conductor adicional, +$80 por día</label>
+          <label class="opcion"><input type="checkbox" name="extra" value="50" data-tipo="dia"> Silla para bebé, +$50 por día</label>
+        </fieldset>
+
+        <label for="comentarios">Comentarios</label>
+        <textarea id="comentarios" name="comentarios" rows="4" maxlength="300" placeholder="Hora de entrega, dirección o dudas"></textarea>
+
+        <label class="opcion"><input type="checkbox" id="acepto" name="acepto" required> Acepto las políticas de renta y el depósito de garantía *</label>
+
+        <button type="submit" class="boton">Enviar solicitud de reserva</button>
+        <p id="mensaje" role="status"></p>
+      </form>
+
+      <aside class="resumen" aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen de tu cotización</h2>
+        <dl>
+          <dt>Renta</dt><dd id="r-renta">$0</dd>
+          <dt>Cobertura</dt><dd id="r-cobertura">$0</dd>
+          <dt>Extras</dt><dd id="r-extras">$0</dd>
+          <dt>Total (IVA incluido)</dt><dd id="r-total" class="total">$0</dd>
+          <dt>Depósito de garantía</dt><dd id="r-deposito">$0</dd>
+        </dl>
+        <p><small>El depósito se retiene al entregar el auto y se libera si no hay daños ni multas.</small></p>
+      </aside>
+    </section>
+  </section>
+</main>
+<footer class="pie">
+  <section aria-label="Datos de contacto">
+    <h2>DriveFlex Renta de Autos</h2>
+    <p>Entrega y recepción a domicilio o en puntos estratégicos de la ciudad.</p>
+  </section>
+  <nav aria-label="Pie de página">
+    <ul class="menu">
+      <li><a href="index.html">Tarifas</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Cotizar</a></li>
+    </ul>
+  </nav>
+  <small>© 2026 DriveFlex. Todos los precios en pesos mexicanos (MXN) e incluyen IVA.</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

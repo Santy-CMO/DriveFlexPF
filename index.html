@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<title>DriveFlex | Renta de autos con tarifas claras</title>
+<meta name="description" content="Renta de autos económicos, sedanes ejecutivos y SUVs por día o fin de semana. Sabe cuánto pagas antes de reservar.">
+</head>
+<body>
+<header class="cabecera">
+  <a class="logo" href="index.html">DriveFlex</a>
+  <nav aria-label="Principal">
+    <ul class="menu">
+      <li><a href="index.html" aria-current="page">Tarifas</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Cotizar</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="banner" aria-labelledby="titulo-banner">
+    <h1 id="titulo-banner">El precio que ves es el precio que pagas</h1>
+    <p>Rentamos autos económicos, sedanes ejecutivos y SUVs por día o fin de semana. Seguro, kilometraje y depósito explicados antes de reservar.</p>
+    <p class="acciones">
+      <a class="boton" href="contacto.html">Cotizar mi renta</a>
+      <a class="boton boton-claro" href="catalogo.html">Ver la flota</a>
+    </p>
+  </section>
+
+  <section class="seccion" aria-labelledby="titulo-tarifas">
+    <h2 id="titulo-tarifas">Tarifas por día</h2>
+    <p>Tarifa base con seguro básico y kilometraje libre incluidos.</p>
+    <section class="tabla-scroll" aria-label="Tabla de tarifas">
+      <table>
+        <caption>Tarifas base y depósito de garantía por categoría</caption>
+        <thead>
+          <tr><th scope="col">Categoría</th><th scope="col">Pasajeros</th><th scope="col">Tarifa por día</th><th scope="col">Depósito de garantía</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Económico</th><td>5</td><td>$450</td><td>$3,000</td></tr>
+          <tr><th scope="row">Sedán ejecutivo</th><td>5</td><td>$850</td><td>$5,000</td></tr>
+          <tr><th scope="row">SUV</th><td>7</td><td>$1,200</td><td>$7,000</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <section class="seccion seccion-gris" aria-labelledby="titulo-coberturas">
+    <h2 id="titulo-coberturas">Qué cubre cada protección</h2>
+    <section class="rejilla-3">
+      <article class="tarjeta">
+        <h3>Básica</h3>
+        <p class="precio">Incluida</p>
+        <p>Responsabilidad civil frente a terceros. Tú cubres los daños al auto hasta el monto del depósito.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Amplia</h3>
+        <p class="precio">+$150 por día</p>
+        <p>Daños al auto y robo total con deducible del 10% del valor del daño.</p>
+      </article>
+      <article class="tarjeta">
+        <h3>Total</h3>
+        <p class="precio">+$250 por día</p>
+        <p>Sin deducible. Incluye cristales, llantas y asistencia vial las 24 horas.</p>
+      </article>
+    </section>
+  </section>
+
+  <section class="seccion" aria-labelledby="titulo-politicas">
+    <h2 id="titulo-politicas">Políticas de renta</h2>
+    <ul class="lista-politicas">
+      <li><strong>Requisitos:</strong> mayor de 21 años, licencia vigente, identificación oficial y tarjeta de crédito o débito a nombre del conductor.</li>
+      <li><strong>Kilometraje:</strong> libre en todas las categorías.</li>
+      <li><strong>Depósito de garantía:</strong> se retiene al entregar el auto y se libera en máximo 3 días hábiles si no hay daños ni multas.</li>
+      <li><strong>Combustible:</strong> se entrega y se recibe con el mismo nivel de tanque.</li>
+      <li><strong>Entrega y recepción:</strong> a domicilio o en puntos estratégicos de la ciudad, con un cargo de $150 por servicio.</li>
+      <li><strong>Cancelación:</strong> gratis hasta 24 horas antes de la entrega.</li>
+    </ul>
+  </section>
+</main>
+<footer class="pie">
+  <section aria-label="Datos de contacto">
+    <h2>DriveFlex Renta de Autos</h2>
+    <p>Entrega y recepción a domicilio o en puntos estratégicos de la ciudad.</p>
+  </section>
+  <nav aria-label="Pie de página">
+    <ul class="menu">
+      <li><a href="index.html">Tarifas</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="contacto.html">Cotizar</a></li>
+    </ul>
+  </nav>
+  <small>© 2026 DriveFlex. Todos los precios en pesos mexicanos (MXN) e incluyen IVA.</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
