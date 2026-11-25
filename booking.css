@@ -1,0 +1,23 @@
+/* Componentes de reserva y dashboard, compatibles con styles.css */
+.status-note { padding: .8rem 1rem; background: var(--primario-claro); border-radius: var(--radio); }
+.inventory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin: 1.5rem 0 2rem; }
+.inventory-card, .booking-panel, .dashboard-panel { background: #fff; padding: 1.25rem; border: 1px solid var(--neutro-borde); border-radius: var(--radio); box-shadow: var(--sombra); }
+.inventory-card h3 { margin-bottom: .4rem; }
+.inventory-card p { margin-bottom: .4rem; text-transform: capitalize; }
+.inventory-card .stock-count { color: var(--exito); font-weight: 700; }
+.booking-panel { max-width: 760px; }
+.booking-panel form { margin-top: 1rem; }
+.form-columns { display: grid; gap: .75rem; }
+.error-text { color: var(--error); font-weight: 600; }
+.success-text { color: var(--exito); font-weight: 600; }
+button:disabled { opacity: .65; cursor: wait; }
+.dashboard-toolbar { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; margin-bottom: 1rem; }
+.dashboard-toolbar label { margin: 0; }
+.dashboard-toolbar input { max-width: 280px; }
+.dashboard-table { overflow-x: auto; }
+.dashboard-table table { min-width: 850px; }
+.dashboard-table select { min-width: 145px; }
+.dashboard-table td { white-space: normal; }
+.order-status { display: inline-block; padding: .2rem .55rem; border-radius: 999px; background: var(--primario-claro); text-transform: capitalize; }
+.flatpickr-day.disabled, .flatpickr-day.disabled:hover { color: #a22 !important; background: #fce8e6 !important; text-decoration: line-through; }
+@media (min-width: 768px) { .form-columns { grid-template-columns: 1fr 1fr; } }

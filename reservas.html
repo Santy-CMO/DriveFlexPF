@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta disponibilidad y reserva un auto DriveFlex.">
+  <title>Disponibilidad y reserva | DriveFlex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <header class="cabecera">
+    <a class="logo" href="index.html">DriveFlex</a>
+    <nav aria-label="Principal"><ul class="menu">
+      <li><a href="index.html">Tarifas</a></li><li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="reservas.html" aria-current="page">Disponibilidad</a></li>
+    </ul></nav>
+  </header>
+  <main>
+    <section class="seccion" aria-labelledby="page-title">
+      <h1 id="page-title">Disponibilidad de autos</h1>
+      <p>Elige un modelo y tus fechas. Las fechas sin unidades disponibles aparecen bloqueadas; el stock se actualiza al recibir cambios en las reservas.</p>
+      <p id="connection-status" class="status-note" role="status">Conectando con el inventario…</p>
+      <section id="inventory" class="inventory-grid" aria-live="polite" aria-label="Stock por modelo"></section>
+      <section class="booking-panel" aria-labelledby="booking-title">
+        <h2 id="booking-title">Solicitar una reserva</h2>
+        <form id="booking-form">
+          <label for="model">Auto *</label>
+          <select id="model" name="model" required><option value="">Selecciona un modelo</option></select>
+          <p id="stock-for-dates" class="status-note" aria-live="polite">Selecciona un modelo para consultar las fechas.</p>
+          <label for="date-range">Entrega y devolución *</label>
+          <input id="date-range" name="date-range" type="text" placeholder="Selecciona las dos fechas" required autocomplete="off">
+          <div class="form-columns">
+            <div><label for="customer-name">Nombre *</label><input id="customer-name" name="customer-name" required minlength="2" maxlength="120" autocomplete="name"></div>
+            <div><label for="customer-email">Correo *</label><input id="customer-email" name="customer-email" type="email" required maxlength="254" autocomplete="email"></div>
+          </div>
+          <label for="customer-phone">Teléfono *</label>
+          <input id="customer-phone" name="customer-phone" type="tel" required minlength="7" maxlength="25" autocomplete="tel">
+          <button id="submit-booking" class="boton" type="submit">Enviar solicitud</button>
+          <p id="booking-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+  <footer class="pie">
+    <section><h2>DriveFlex Renta de Autos</h2><p>Solicitud sujeta a confirmación.</p></section>
+    <nav aria-label="Administración"><ul class="menu"><li><a href="dashboard.html">Panel de pedidos</a></li></ul></nav>
+    <small>© 2026 DriveFlex</small>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+  <script type="module" src="reservas.js"></script>
+</body>
+</html>
